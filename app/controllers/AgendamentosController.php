@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\Agendamento;
+require_once('app/models/Agendamento.php');
 
 class AgendamentosController{
     private $agendamento;
@@ -58,3 +59,5 @@ class AgendamentosController{
         }
     }
 }
+
+new AgendamentosController();
