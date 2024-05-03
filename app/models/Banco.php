@@ -20,6 +20,11 @@ class Banco{
             // Carrega as variáveis de ambiente do arquivo .env
             $dotenv = Dotenv::createImmutable(__DIR__ . '/../../'); // Ajuste o caminho conforme sua estrutura de diretórios
             $dotenv->load();
+
+            $this->host = 'localhost';
+            $this->db   = 'odontologia';
+            $this->user = 'root';
+            $this->pass = '';
             $this->host = $_ENV['DB_HOST'];
             $this->db   = $_ENV['DB_DATABASE'];
             $this->user = $_ENV['DB_USERNAME'];

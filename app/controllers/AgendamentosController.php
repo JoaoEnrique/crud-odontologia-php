@@ -19,6 +19,7 @@ class AgendamentosController{
         $this->agendamento->setMotivoConsulta($_POST['motivo_consulta']);
         $result = $this->agendamento->criar();
 
+
         if($result >= 1){
             echo "<script>document.location='../../consultar.php?sucess=1&message=Registro incluído com sucesso!'</script>";
         }else{
