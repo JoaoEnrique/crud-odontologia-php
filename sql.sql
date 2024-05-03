@@ -1,3 +1,4 @@
+-- CRIACAO DA TABELA
 CREATE TABLE agendamentos(
     id INTEGER PRIMARY KEY AUTO_INCREMENT, 
     nome VARCHAR(200) NOT NULL, 
@@ -9,6 +10,7 @@ CREATE TABLE agendamentos(
     motivo_consulta ENUM('Restauração', 'Canal', 'Implante', 'Extração', 'Clareamento', 'Lentes')  NOT NULL
 );
 
+-- PROCEDURES
 -- Adicionar
 DELIMITER //
 CREATE PROCEDURE AdicionarAgendamento(
@@ -86,7 +88,7 @@ BEGIN
 END //
 DELIMITER ;
 
-
+-- FUNCTIONS
 -- Formatar Data
 DELIMITER $$
 CREATE FUNCTION FormatarData(data_formatar DATE)
